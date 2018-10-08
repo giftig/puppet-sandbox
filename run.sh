@@ -1,4 +1,11 @@
 #!/bin/bash
 # Run the image interactively
 
-docker --rm -it --entrypoint -v "$(pwd):/mnt" -w /mnt /bin/bash giftig/puppet-playground:latest
+docker run \
+  --rm \
+  -it \
+  --entrypoint /bin/bash \
+  --net host \
+  -v "$(pwd):/mnt" \
+  -w /mnt \
+  giftig/puppet-playground:latest

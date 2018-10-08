@@ -11,6 +11,10 @@ class potato {
   }
 }
 
-node /^.*$/ {
+node /^data\.potato\.[0-9]+$/ {
+  include potato
+}
+
+node default {
   include potato
 }
