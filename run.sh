@@ -5,7 +5,6 @@ docker run \
   --rm \
   -it \
   --entrypoint /bin/bash \
-  --net host \
-  -v "$(pwd):/mnt" \
-  -w /mnt \
+  -v "$(pwd):/etc/puppetlabs/code" \
+  -w /etc/puppetlabs/code\
   giftig/puppet-playground:latest
